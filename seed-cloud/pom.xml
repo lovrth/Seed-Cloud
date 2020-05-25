@@ -12,6 +12,7 @@
         <module>../seed-common</module>
         <module>../seed-register</module>
         <module>../seed-auth</module>
+        <module>../seed-gateway</module>
     </modules>
 
     <name>seed-cloud</name>
@@ -24,12 +25,16 @@
         <relativePath/>
     </parent>
 
+    <properties>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.SR1</version>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
