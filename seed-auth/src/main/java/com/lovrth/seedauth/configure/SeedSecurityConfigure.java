@@ -25,10 +25,8 @@ public class SeedSecurityConfigure extends WebSecurityConfigurerAdapter
     @Autowired
     private SeedUserDetailService seedUserDetailService;
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -48,6 +46,6 @@ public class SeedSecurityConfigure extends WebSecurityConfigurerAdapter
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(seedUserDetailService).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(seedUserDetailService).passwordEncoder(passwordEncoder);
     }
 }

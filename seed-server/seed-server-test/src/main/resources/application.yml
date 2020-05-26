@@ -21,3 +21,10 @@ security:
     resource:
       id: ${spring.application.name}
       user-info-uri: http://localhost:8301/auth/user
+
+feign:
+  hystrix:
+    enabled: true #让feign的回退生效
+
+hystrix:
+  shareSecurityContext: true #让请求获取到令牌

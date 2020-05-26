@@ -1,4 +1,4 @@
-package main.java.com.speedchina.seed.common.entity;
+package com.speedchina.seed.common.entity;
 
 import lombok.Data;
 

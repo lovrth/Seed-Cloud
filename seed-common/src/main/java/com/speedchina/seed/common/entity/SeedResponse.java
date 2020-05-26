@@ -1,10 +1,8 @@
-package main.java.com.speedchina.seed.common.entity;
+package com.speedchina.seed.common.entity;
 
 import java.util.HashMap;
 
-/**
- * @author MrBird
- */
+
 public class SeedResponse extends HashMap<String, Object> {
 
     private static final long serialVersionUID = -8713837118340960775L;

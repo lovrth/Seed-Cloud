@@ -1,6 +1,7 @@
 package com.lovrth.seedauth.service;
 
-import main.java.com.speedchina.seed.common.entity.SeedAuthUser;
+
+import com.speedchina.seed.common.entity.SeedAuthUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;

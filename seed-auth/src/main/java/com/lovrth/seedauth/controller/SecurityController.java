@@ -1,8 +1,10 @@
 package com.lovrth.seedauth.controller;
 
 
-import main.java.com.speedchina.seed.common.entity.SeedResponse;
-import main.java.com.speedchina.seed.common.exception.SeedAuthException;
+
+import com.speedchina.seed.common.entity.SeedResponse;
+
+import com.speedchina.seed.common.exception.SeedAuthException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.provider.token.ConsumerTokenServices;
@@ -36,10 +38,10 @@ public class SecurityController
     {
         String authorization = request.getHeader("Authorization");
         String token = StringUtils.replace(authorization, "bearer ", "");
-        SeedResponse febsResponse = new SeedResponse();
+        SeedResponse seedResponse = new SeedResponse();
         if (!consumerTokenServices.revokeToken(token)) {
             throw new SeedAuthException("退出登录失败");
         }
-        return febsResponse.message("退出登录成功");
+        return seedResponse.message("退出登录成功");
     }
 }

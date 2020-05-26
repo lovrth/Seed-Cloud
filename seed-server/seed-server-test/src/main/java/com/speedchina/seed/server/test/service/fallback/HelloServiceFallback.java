@@ -1,0 +1,23 @@
+package com.speedchina.seed.server.test.service.fallback;
+
+import com.speedchina.seed.server.test.service.IHelloService;
+import feign.hystrix.FallbackFactory;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+
+/**
+ * feign回退方法
+ * @author suyuan
+ * @date 2020/5/26 11:47
+ */
+@Slf4j
+@Component
+public class HelloServiceFallback implements FallbackFactory<IHelloService> {
+    @Override
+    public IHelloService create(Throwable throwable) {
+        return name -> {
+            log.error("调用seed-server-system服务出错", throwable);
+            return "调用出错";
+        };
+    }
+}
