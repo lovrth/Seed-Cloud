@@ -1,4 +1,4 @@
-package com.lovrth.seedauth.translator;
+package com.speedchina.seed.translator;
 
 import com.speedchina.seed.common.entity.SeedResponse;
 import lombok.extern.slf4j.Slf4j;

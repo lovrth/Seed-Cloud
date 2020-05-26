@@ -1,4 +1,4 @@
-package com.lovrth.seedauth.configure;
+package com.speedchina.seed.configure;
 
 import com.speedchina.seed.common.handler.SeedAccessDeniedHandler;
 import com.speedchina.seed.common.handler.SeedAuthExceptionEntryPoint;

@@ -1,4 +1,4 @@
-package com.lovrth.seedauth.properties;
+package com.speedchina.seed.properties;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.lovrth.seedauth.handler;
+package com.speedchina.seed.handler;
 
 
 import com.speedchina.seed.common.handler.BaseExceptionHandler;

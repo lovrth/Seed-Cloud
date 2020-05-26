@@ -1,4 +1,4 @@
-package com.lovrth.seedauth.controller;
+package com.speedchina.seed.controller;
 
 
 

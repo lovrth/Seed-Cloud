@@ -1,4 +1,4 @@
-package com.lovrth.seedregister.configure;
+package com.speedchina.seed.configure;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

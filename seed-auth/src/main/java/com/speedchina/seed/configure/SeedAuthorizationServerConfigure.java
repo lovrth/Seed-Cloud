@@ -1,11 +1,11 @@
-package com.lovrth.seedauth.configure;
+package com.speedchina.seed.configure;
 
 
-import com.lovrth.seedauth.properties.SeedAuthProperties;
-import com.lovrth.seedauth.properties.SeedClientsProperties;
-import com.lovrth.seedauth.service.SeedUserDetailService;
+import com.speedchina.seed.properties.SeedAuthProperties;
+import com.speedchina.seed.properties.SeedClientsProperties;
+import com.speedchina.seed.service.SeedUserDetailService;
 
-import com.lovrth.seedauth.translator.SeedWebResponseExceptionTranslator;
+import com.speedchina.seed.translator.SeedWebResponseExceptionTranslator;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

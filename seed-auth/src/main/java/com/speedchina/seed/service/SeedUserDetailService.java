@@ -1,4 +1,4 @@
-package com.lovrth.seedauth.service;
+package com.speedchina.seed.service;
 
 
 import com.speedchina.seed.common.entity.SeedAuthUser;
