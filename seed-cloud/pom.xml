@@ -13,6 +13,7 @@
         <module>../seed-register</module>
         <module>../seed-auth</module>
         <module>../seed-gateway</module>
+        <module>../seed-server</module>
     </modules>
 
     <name>seed-cloud</name>
