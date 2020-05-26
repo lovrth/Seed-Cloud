@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>seed-cloud</artifactId>
-        <groupId>com.lovrth</groupId>
+        <groupId>com.speedchina</groupId>
         <version>0.0.1</version>
         <relativePath>../seed-cloud/pom.xml</relativePath>
     </parent>
