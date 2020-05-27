@@ -2,6 +2,8 @@ package com.speedchina.seed.configure;
 
 import com.speedchina.seed.common.handler.SeedAccessDeniedHandler;
 import com.speedchina.seed.common.handler.SeedAuthExceptionEntryPoint;
+import com.speedchina.seed.properties.SeedAuthProperties;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,14 +25,19 @@ public class SeedResourceServerConfigure extends ResourceServerConfigurerAdapter
     private SeedAccessDeniedHandler accessDeniedHandler;
     @Autowired
     private SeedAuthExceptionEntryPoint exceptionEntryPoint;
+    @Autowired
+    private SeedAuthProperties properties;
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+        String[] anonUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(properties.getAnonUrl(), ",");
         http.csrf().disable()
                 .requestMatchers().antMatchers("/**")
                 .and()
                 .authorizeRequests()
-                .antMatchers("/**").authenticated();
+                .antMatchers(anonUrls).permitAll()//配置免认证资源
+                .antMatchers("/**").authenticated()
+                .and().httpBasic();
     }
 
     /**
