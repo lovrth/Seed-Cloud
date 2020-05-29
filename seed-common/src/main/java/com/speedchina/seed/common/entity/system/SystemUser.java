@@ -4,16 +4,22 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.speedchina.seed.common.annotation.IsMobile;
 import lombok.Data;
+import org.springframework.stereotype.Repository;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 
 
 @Data
 @TableName("t_user")
-public class SystemUser implements Serializable {
-
+@Repository
+public class SystemUser implements Serializable
+{
     private static final long serialVersionUID = -4352868070794165001L;
 
     // 用户状态：有效
@@ -41,6 +47,7 @@ public class SystemUser implements Serializable {
      * 用户名
      */
     @TableField("USERNAME")
+    @Size(min = 4, max = 10, message = "{range}") //注解表示值的长度范围为4到10；
     private String username;
 
     /**
@@ -59,18 +66,22 @@ public class SystemUser implements Serializable {
      * 邮箱
      */
     @TableField("EMAIL")
+    @Size(max = 50, message = "{noMoreThan}") //表示值的长度不能超过50
+    @Email(message = "{email}") //表示值必须为邮箱。
     private String email;
 
     /**
      * 联系电话
      */
     @TableField("MOBILE")
+    @IsMobile(message = "{mobile}") //自定义注解
     private String mobile;
 
     /**
      * 状态 0锁定 1有效
      */
     @TableField("STATUS")
+    @NotBlank(message = "{required}")
     private String status;
 
     /**
@@ -95,6 +106,7 @@ public class SystemUser implements Serializable {
      * 性别 0男 1女 2 保密
      */
     @TableField("SSEX")
+    @NotBlank(message = "{required}")
     private String sex;
 
     /**
@@ -107,10 +119,11 @@ public class SystemUser implements Serializable {
      * 描述
      */
     @TableField("DESCRIPTION")
+    @Size(max = 100, message = "{noMoreThan}")
     private String description;
 
     /**
-     * 部门名称 非表字段
+     * 部门名称
      */
     @TableField(exist = false)
     private String deptName;
@@ -120,7 +133,7 @@ public class SystemUser implements Serializable {
     @TableField(exist = false)
     private String createTimeTo;
     /**
-     * 角色 ID 非表字段
+     * 角色 ID
      */
     @TableField(exist = false)
     private String roleId;

@@ -13,10 +13,10 @@ public class TestController {
 
     @GetMapping("info")
     public String test(){
-        return "seed-server-system";
+        return "seed-server-mapper.system";
     }
 
-    @GetMapping("user")
+    @GetMapping("currentUser")
     public Principal currentUser(Principal principal) {
         return principal;
     }
