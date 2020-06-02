@@ -4,23 +4,40 @@ server:
 spring:
   application:
     name: seed-Server-System
+  boot:
+    admin:
+      client:
+        url: http://localhost:8401
+        username: seed
+        password: 123456
+  zipkin:
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      probability: 1
+  rabbitmq:
+    host: 192.168.10.222
+    port: 5672
+    username: seed
+    password: 123456
   datasource:
-      dynamic:
-        p6spy: true
-        hikari:
-          connection-timeout: 30000
-          max-lifetime: 1800000
-          max-pool-size: 15
-          min-idle: 5
-          connection-test-query: select 1
-          pool-name: SeedHikariCP
-        primary: base
-        datasource:
-          base:
-            username: root
-            password: 123456
-            driver-class-name: com.mysql.cj.jdbc.Driver
-            url: jdbc:mysql://192.168.10.222:3306/seed_cloud_base?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+    dynamic:
+      p6spy: true
+      hikari:
+        connection-timeout: 30000
+        max-lifetime: 1800000
+        max-pool-size: 15
+        min-idle: 5
+        connection-test-query: select 1
+        pool-name: SeedHikariCP
+      primary: base
+      datasource:
+        base:
+          username: root
+          password: 123456
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.10.222:3306/seed_cloud_base?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
 
 eureka:
   instance:
@@ -37,9 +54,24 @@ security:
       id: ${spring.application.name}
       user-info-uri: http://localhost:8301/auth/user
 mybatis-plus:
-  type-aliases-package: com.speedchina.seed.common.entity.system
+  type-aliases-package: com.speedchina.seed.common.entity.mapper
   mapper-locations: classpath:mapper/*/*.xml
   configuration:
     jdbc-type-for-null: null
   global-config:
     banner: false
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: "@project.description@"
+    version: "@project.version@"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

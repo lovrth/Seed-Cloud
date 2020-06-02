@@ -8,7 +8,7 @@ import com.speedchina.seed.common.entity.system.SystemUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-@Mapper
+
 public interface UserMapper extends BaseMapper<SystemUser> {
 
     /**

@@ -38,10 +38,11 @@ public class UserController
 
     @PostMapping
     @PreAuthorize("hasAnyAuthority('user:add')") //@Valid对应实体对象传参时的参数校验
-    public void addUser(@Valid SystemUser user) throws SeedException
+    public SeedResponse addUser(@Valid SystemUser user) throws SeedException
     {
         try {
             this.userService.createUser(user);
+            return new SeedResponse().data("新增成功");
         } catch (Exception e) {
             String message = "新增用户失败";
             log.error(message, e);
@@ -51,9 +52,10 @@ public class UserController
 
     @PutMapping
     @PreAuthorize("hasAnyAuthority('user:update')")
-    public void updateUser(@Valid SystemUser user) throws SeedException {
+    public SeedResponse updateUser(@Valid SystemUser user) throws SeedException {
         try {
             this.userService.updateUser(user);
+            return new SeedResponse().data("修改用户成功");
         } catch (Exception e) {
             String message = "修改用户失败";
             log.error(message, e);
@@ -68,10 +70,11 @@ public class UserController
      */
     @DeleteMapping("/{userIds}")
     @PreAuthorize("hasAnyAuthority('user:delete')")
-    public void deleteUsers(@NotBlank(message = "{required}") @PathVariable String userIds) throws SeedException {
+    public SeedResponse deleteUsers(@NotBlank(message = "{required}") @PathVariable String userIds) throws SeedException {
         try {
             String[] ids = userIds.split(StringPool.COMMA);
             this.userService.deleteUsers(ids);
+            return new SeedResponse().data("删除用户成功");
         } catch (Exception e) {
             String message = "删除用户失败";
             log.error(message, e);

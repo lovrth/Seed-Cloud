@@ -13,7 +13,7 @@ public class TestController {
 
     @GetMapping("info")
     public String test(){
-        return "seed-server-mapper.system";
+        return "seed-server-mapper.mapper";
     }
 
     @GetMapping("currentUser")

@@ -4,6 +4,23 @@ server:
 spring:
   application:
     name: seed-Server-Test
+  boot:
+    admin:
+      client:
+        url: http://localhost:8401
+        username: seed
+        password: 123456
+  zipkin:
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      probability: 1
+  rabbitmq:
+    host: 192.168.10.222
+    port: 5672
+    username: seed
+    password: 123456
   autoconfigure: # DataSourceAutoConfiguration关闭数据库自动装配 / DynamicDataSourceAutoConfiguration关闭多数据源自动装配
       exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration
 
@@ -30,5 +47,20 @@ feign:
 
 hystrix:
   shareSecurityContext: true #让请求获取到令牌
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: "@project.description@"
+    version: "@project.version@"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 

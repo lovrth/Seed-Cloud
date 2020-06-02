@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: seed-Auth
+  boot:
+    admin:
+      client:
+        url: http://localhost:8401
+        username: seed
+        password: 123456
   redis:
     database: 0
     host: 127.0.0.1
@@ -44,9 +50,24 @@ eureka:
       defaultZone: http://seed:123456@localhost:8001/register/eureka/
 
 mybatis-plus:
-  type-aliases-package: com.speedchina.seed.common.entity.mapper.system #指定别名扫描路径，这个路径后续在febs-common模块里定义，该路径下的实体类将自动配置别名，默认为类名首字母小写。配置别名后，便可以直接在MyBatis XML文件里使用了
+  type-aliases-package: com.speedchina.seed.common.entity.mapper.mapper #指定别名扫描路径，这个路径后续在febs-common模块里定义，该路径下的实体类将自动配置别名，默认为类名首字母小写。配置别名后，便可以直接在MyBatis XML文件里使用了
   mapper-locations: classpath:mapper/*.xml
   configuration:
     jdbc-type-for-null: null
   global-config:
     banner: false
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: "@project.description@"
+    version: "@project.version@"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

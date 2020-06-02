@@ -6,7 +6,7 @@ import com.speedchina.seed.common.entity.system.UserRole;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-@Mapper
+
 public interface UserRoleMapper extends BaseMapper<UserRole>
 {
 

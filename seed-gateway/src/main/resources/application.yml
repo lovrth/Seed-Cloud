@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: seed-Gateway
+  boot:
+    admin:
+      client:
+        url: http://localhost:8401
+        username: seed
+        password: 123456
   autoconfigure:
       exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration #关闭数据库自动装配
 
@@ -43,3 +49,18 @@ zuul:
 
 ribbon:
   ReadTimeout: 3000
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: "@project.description@"
+    version: "@project.version@"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

@@ -14,7 +14,9 @@ public class SeedRegisterWebSecurityConfigure extends WebSecurityConfigurerAdapt
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().ignoringAntMatchers("/eureka/**");
+        http.csrf().ignoringAntMatchers("/eureka/**")
+                .and()
+                .authorizeRequests().antMatchers("/actuator/**").permitAll();//将/actuator/**资源纳入到免认证路径中
         super.configure(http);
     }
 }
