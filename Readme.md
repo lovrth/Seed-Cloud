@@ -1,10 +1,10 @@
-### FEBS Cloud 微服务权限系统
+### SEED Cloud 微服务权限系统
 ![https://img.shields.io/badge/license-Apache%202.0-blue.svg?longCache=true&style=flat-square](https://img.shields.io/badge/license-Apache%202.0-blue.svg?longCache=true&style=flat-square)
 ![https://img.shields.io/badge/springcloud-Hoxton.RELEASE-yellow.svg?style=flat-square](https://img.shields.io/badge/springcloud-Greenwich.SR1-yellow.svg?style=flat-square)
 ![https://img.shields.io/badge/springboot-2.2.0.RELEASE-brightgreen.svg?style=flat-square](https://img.shields.io/badge/springboot-2.1.6.RELEASE-brightgreen.svg?style=flat-square)
 
 
-FEBS Cloud是一款使用Spring Cloud Greenwich.SR1、Spring Cloud OAuth2构建的低耦合权限管理系统该系统具有如下特点：
+SEED Cloud是一款使用Spring Cloud Greenwich.SR1、Spring Cloud OAuth2构建的低耦合权限管理系统该系统具有如下特点：
 
 序号 | 特点
 ---|---
@@ -29,7 +29,7 @@ SBA平台相关账号密码：
 
 平台 | 账号| 密码
 ---|---|---
-seeds-admin | seed |123456
+seed-admin | seed |123456
 
 
 ### 服务模块
