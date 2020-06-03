@@ -11,8 +11,8 @@
     </parent>
 
     <artifactId>seed-server-system</artifactId>
-    <name>seed-Server-System</name>
-    <description>seed-Server-System微服务系统模块</description>
+    <name>seed-server-system</name>
+    <description>seed-server-system微服务系统模块</description>
 
     <dependencies>
         <dependency>

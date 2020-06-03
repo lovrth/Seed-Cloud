@@ -11,8 +11,8 @@
     </parent>
 
     <artifactId>seed-server-test</artifactId>
-    <name>seed-Server-Test</name>
-    <description>seed-Server-Test测试服务模块</description>
+    <name>seed-server-test</name>
+    <description>seed-server-test测试服务模块</description>
 
     <build>
         <plugins>

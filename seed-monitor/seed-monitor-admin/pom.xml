@@ -10,8 +10,8 @@
     </parent>
 
     <artifactId>seed-monitor-admin</artifactId>
-    <name>seed-Monitor-Admin</name>
-    <description>seed-Monitor-Admin基于Spring Boot Admin搭建的监控程序</description>
+    <name>seed-monitor-admin</name>
+    <description>seed-monitor-admin基于Spring Boot Admin搭建的监控程序</description>
 
     <dependencies>
         <dependency>

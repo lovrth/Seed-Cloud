@@ -18,8 +18,8 @@
 
     <artifactId>seed-server</artifactId>
     <packaging>pom</packaging>
-    <name>seed-Server</name>
-    <description>seed-Server服务提供模块</description>
+    <name>seed-server</name>
+    <description>seed-server服务提供模块</description>
 
     <dependencies>
         <dependency>

@@ -12,8 +12,8 @@
 
     <artifactId>seed-monitor</artifactId>
     <packaging>pom</packaging>
-    <name>seed-Monitor</name>
-    <description>seed-Monitor监控模块</description>
+    <name>seed-monitor</name>
+    <description>seed-monitor监控模块</description>
 
     <modules>
         <module>seed-monitor-admin</module>

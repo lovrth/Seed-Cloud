@@ -10,8 +10,8 @@
     </parent>
 
     <artifactId>seed-gateway</artifactId>
-    <name>seed-Gateway</name>
-    <description>seed-Gateway微服务网关</description>
+    <name>seed-gateway</name>
+    <description>seed-gateway微服务网关</description>
 
     <dependencies>
         <dependency>
