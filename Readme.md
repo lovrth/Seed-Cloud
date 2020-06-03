@@ -1,10 +1,6 @@
-### SEED Cloud 微服务权限系统
-![https://img.shields.io/badge/license-Apache%202.0-blue.svg?longCache=true&style=flat-square](https://img.shields.io/badge/license-Apache%202.0-blue.svg?longCache=true&style=flat-square)
-![https://img.shields.io/badge/springcloud-Hoxton.RELEASE-yellow.svg?style=flat-square](https://img.shields.io/badge/springcloud-Greenwich.SR1-yellow.svg?style=flat-square)
-![https://img.shields.io/badge/springboot-2.2.0.RELEASE-brightgreen.svg?style=flat-square](https://img.shields.io/badge/springboot-2.1.6.RELEASE-brightgreen.svg?style=flat-square)
+### SEED-Cloud 微服务权限系统
 
-
-SEED Cloud是一款使用Spring Cloud Greenwich.SR1、Spring Cloud OAuth2构建的低耦合权限管理系统该系统具有如下特点：
+SEED-Cloud是一款使用Spring Cloud Greenwich.SR1、Spring Cloud OAuth2构建的低耦合权限管理系统该系统具有如下特点：
 
 序号 | 特点
 ---|---
@@ -12,10 +8,10 @@ SEED Cloud是一款使用Spring Cloud Greenwich.SR1、Spring Cloud OAuth2构建�
 2 | 认证服务器与资源服务器分离，方便接入自己的微服务系统
 3 | 集成SpringBootAdmin
 4 | 网关限流，网关日志
-5 | 微服务Docker化，使用Docker Compose一键部署
-6 | 认证授权，数据权限，前后端参数校验等
-7 | Doc Starter，几行配置自动生成系统api接口文档
-8 | OAuth2 刷新令牌模式
+5 | 认证授权，数据权限，前后端参数校验等
+6 | Doc Starter，几行配置自动生成系统api接口文档
+7 | OAuth2 刷新令牌模式
+8 | 微服务Docker化，使用Docker Compose一键部署
 
 ### 演示地址
 
