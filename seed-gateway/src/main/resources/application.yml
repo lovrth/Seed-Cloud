@@ -11,7 +11,7 @@ spring:
         username: seed
         password: 123456
   autoconfigure:
-      exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration #关闭数据库自动装配
+      exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration #关闭数据库自动装配 redis自动装配
 
 eureka:
   instance:

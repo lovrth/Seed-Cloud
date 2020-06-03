@@ -22,7 +22,7 @@ spring:
     username: seed
     password: 123456
   autoconfigure: # DataSourceAutoConfiguration关闭数据库自动装配 / DynamicDataSourceAutoConfiguration关闭多数据源自动装配
-      exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration
+      exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration,org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
 
 eureka:
   instance:
