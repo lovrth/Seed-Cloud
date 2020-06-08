@@ -15,8 +15,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 @SpringBootApplication
 @EnableGlobalMethodSecurity(prePostEnabled = true)//开启Spring Cloud Security权限注解
 @SeedCloudApplication
-public class SeedServerTestApplication
-{
+public class SeedServerTestApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SeedServerTestApplication.class, args);

@@ -17,8 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableSeedServerProtect
 //@MapperScan("com.speedchina.seed.server.system.mapper.*")
 @MapperScan("com.speedchina.seed.server.system.mapper")
-public class SeedServerSystemApplication
-{
+public class SeedServerSystemApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SeedServerSystemApplication.class, args);
