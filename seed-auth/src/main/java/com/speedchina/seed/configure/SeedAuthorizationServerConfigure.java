@@ -26,8 +26,6 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
 
 /**
  * 认证服务器相关的安全配置类
- * @author suyuan
- * @date 2020/5/25 16:16
  */
 @Configuration
 @EnableAuthorizationServer
@@ -90,8 +88,6 @@ public class SeedAuthorizationServerConfigure extends AuthorizationServerConfigu
      * 令牌有效时间为60 * 60 * 24秒
      * 刷新令牌有效时间为60 * 60 * 24 * 7秒
      * setSupportRefreshToken设置为true表示开启刷新令牌的支持
-     * @author suyuan
-     * @date 2020/5/25 16:19
      */
     @Primary
     @Bean

@@ -26,21 +26,16 @@ import java.util.List;
 
 /**
  * web配置类
- * @author suyuan
- * @date 2020/5/28 15:36
  */
 @Configuration
 @EnableSwagger2
-public class SeedWebConfigure
-{
+public class SeedWebConfigure {
 
     @Autowired
     private SeedServerSystemProperties properties;
 
     /**
      * MyBatis Plus分页插件配置
-     * @author suyuan 
-     * @date 2020/5/28 15:37
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
@@ -60,8 +55,10 @@ public class SeedWebConfigure
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo(swagger))
-                .securitySchemes(Collections.singletonList(securityScheme(swagger)))//安全策略
-                .securityContexts(Collections.singletonList(securityContext(swagger)));//安全上下文
+                // 安全策略
+                .securitySchemes(Collections.singletonList(securityScheme(swagger)))
+                // 安全上下文
+                .securityContexts(Collections.singletonList(securityContext(swagger)));
     }
 
     private ApiInfo apiInfo(SeedSwaggerProperties swagger) {
@@ -75,10 +72,11 @@ public class SeedWebConfigure
     }
 
     private SecurityScheme securityScheme(SeedSwaggerProperties swagger) {
-        GrantType grantType = new ResourceOwnerPasswordCredentialsGrant(swagger.getGrantUrl());//密码模式，认证地址为http://localhost:8301/auth/oauth/token
+        // 密码模式，认证地址为http://localhost:8301/auth/oauth/token
+        GrantType grantType = new ResourceOwnerPasswordCredentialsGrant(swagger.getGrantUrl());
 
         return new OAuthBuilder()
-                .name(swagger.getName())//名称
+                .name(swagger.getName())
                 .grantTypes(Collections.singletonList(grantType))
                 .scopes(Arrays.asList(scopes(swagger)))
                 .build();
@@ -86,8 +84,10 @@ public class SeedWebConfigure
 
     private SecurityContext securityContext(SeedSwaggerProperties swagger) {
         return SecurityContext.builder()
-                .securityReferences(Collections.singletonList(new SecurityReference(swagger.getName(), scopes(swagger))))//名称关联了上面定义的安全策略
-                .forPaths(PathSelectors.any())//设置所有API接口都用这个安全上下文
+                // 名称关联了上面定义的安全策略
+                .securityReferences(Collections.singletonList(new SecurityReference(swagger.getName(), scopes(swagger))))
+                // 设置所有API接口都用这个安全上下文
+                .forPaths(PathSelectors.any())
                 .build();
     }
 
@@ -96,5 +96,4 @@ public class SeedWebConfigure
                 new AuthorizationScope(swagger.getScope(), "")
         };
     }
-
 }

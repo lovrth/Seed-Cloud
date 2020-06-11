@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: seed-Server-System
+    name: seed-server-system
   boot:
     admin:
       client:

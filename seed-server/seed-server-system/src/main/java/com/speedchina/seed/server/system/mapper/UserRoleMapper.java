@@ -3,12 +3,10 @@ package com.speedchina.seed.server.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.speedchina.seed.common.entity.system.UserRole;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 
-public interface UserRoleMapper extends BaseMapper<UserRole>
-{
+public interface UserRoleMapper extends BaseMapper<UserRole> {
 
     /**
      * 根据用户Id删除该用户的角色关系

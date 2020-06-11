@@ -5,9 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
-/**
- * @author MrBird
- */
 @RestController
 public class TestController {
 

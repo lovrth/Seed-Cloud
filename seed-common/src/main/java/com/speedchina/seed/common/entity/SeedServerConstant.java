@@ -2,11 +2,8 @@ package com.speedchina.seed.common.entity;
 
 /**
  * 微服务名称常量类
- * @author suyuan
- * @date 2020/5/26 11:44 
  */
-public class SeedServerConstant
-{
+public class SeedServerConstant {
 
     public static final String SEED_AUTH = "seed-Auth";
     public static final String SEED_CLOUD = "seed-Cloud";

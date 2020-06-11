@@ -6,8 +6,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 /**
  * 开启Eureka服务端保护
- * @author lovrth
- * @since 2020/5/19
  */
 @EnableWebSecurity
 public class SeedRegisterWebSecurityConfigure extends WebSecurityConfigurerAdapter {
@@ -16,7 +14,8 @@ public class SeedRegisterWebSecurityConfigure extends WebSecurityConfigurerAdapt
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().ignoringAntMatchers("/eureka/**")
                 .and()
-                .authorizeRequests().antMatchers("/actuator/**").permitAll();//将/actuator/**资源纳入到免认证路径中
+                // 将/actuator/**资源纳入到免认证路径中
+                .authorizeRequests().antMatchers("/actuator/**").permitAll();
         super.configure(http);
     }
 }

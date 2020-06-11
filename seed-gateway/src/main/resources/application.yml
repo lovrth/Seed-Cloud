@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: seed-Gateway
+    name: seed-gateway
   boot:
     admin:
       client:
@@ -28,22 +28,22 @@ zuul:
   routes:
     auth:
       path: /auth/**
-      serviceId: seed-Auth
-      sensitiveHeaders: "*"
+      serviceId: seed-auth
+      sensitiveHeaders: "*" # 请求头信息不过滤
     system:
       path: /system/**
-      serviceId: seed-Server-System
+      serviceId: seed-server-system
       sensitiveHeaders: "*"
     test:
       path: /test/**
-      serviceId: seed-Server-Test
+      serviceId: seed-server-test
       sensitiveHeaders: "*"
   retryable: true
-  ignored-services: "*"
+  ignored-services: "*" # 关闭所有默认路由配置规则
   ribbon:
     eager-load:
       enabled: true
-  SendErrorFilter: #自定义的Zuul异常过滤器生效，让默认的异常过滤器失效
+  SendErrorFilter: # 自定义的Zuul异常过滤器生效，让默认的异常过滤器失效
     error:
       disable: true
 

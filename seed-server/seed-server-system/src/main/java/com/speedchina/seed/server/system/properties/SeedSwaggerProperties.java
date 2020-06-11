@@ -4,8 +4,7 @@ import lombok.Data;
 
 
 @Data
-public class SeedSwaggerProperties
-{
+public class SeedSwaggerProperties {
 
     private String basePackage;
     private String title;

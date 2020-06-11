@@ -13,8 +13,6 @@ import java.io.IOException;
 
 /**
  * 用户无权限403
- * @author suyuan
- * @date 2020/5/26 9:43
  */
 public class SeedAccessDeniedHandler implements AccessDeniedHandler {
 

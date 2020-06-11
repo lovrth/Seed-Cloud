@@ -17,8 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 自定义Zuul异常处理
  * 处理转发请求超时和服务不可用
- * @author suyuan
- * @date 2020/5/26 11:14
  */
 @Slf4j
 @Component

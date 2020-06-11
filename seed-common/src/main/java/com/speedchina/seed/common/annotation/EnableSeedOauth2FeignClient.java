@@ -7,14 +7,10 @@ import java.lang.annotation.*;
 
 /**
  * 将SeedOAuth2FeignConfigure类注入
- * @author suyuan
- * @date 2020/5/26 14:44
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Import(SeedOAuth2FeignConfigure.class)
-public @interface EnableSeedOauth2FeignClient
-{
-
+public @interface EnableSeedOauth2FeignClient {
 }

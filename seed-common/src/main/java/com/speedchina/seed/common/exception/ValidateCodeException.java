@@ -2,8 +2,6 @@ package com.speedchina.seed.common.exception;
 
 /**
  * 验证码类型异常
- * @author suyuan
- * @date 2020/5/27 14:50
  */
 public class ValidateCodeException extends Exception{
 

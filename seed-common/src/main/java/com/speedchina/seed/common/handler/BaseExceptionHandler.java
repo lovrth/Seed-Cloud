@@ -21,12 +21,9 @@ import java.util.Set;
 
 /**
  * 全局处理Controller层抛出来的异常
- * @author suyuan
- * @date 2020/5/26 11:32
  */
 @Slf4j
-public class BaseExceptionHandler
-{
+public class BaseExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR) //500

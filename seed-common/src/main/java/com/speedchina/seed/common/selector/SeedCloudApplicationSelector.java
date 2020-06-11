@@ -8,8 +8,6 @@ import org.springframework.core.type.AnnotationMetadata;
 
 /**
  * 将多个配置类一次性都注册到IOC容器中
- * @author suyuan
- * @date 2020/5/26 15:37
  */
 public class SeedCloudApplicationSelector implements ImportSelector {
 

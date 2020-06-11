@@ -10,7 +10,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-@EnableSeedAuthExceptionHandler//自定义异常
+@EnableSeedAuthExceptionHandler //自定义异常
 @EnableSeedServerProtect
 @EnableSeedLettuceRedis
 @MapperScan("com.speedchina.seed.mapper")

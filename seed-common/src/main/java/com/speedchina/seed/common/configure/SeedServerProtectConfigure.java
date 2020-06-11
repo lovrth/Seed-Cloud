@@ -12,8 +12,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * 让SeedServerProtectInterceptor过滤器生效我们需要定义一个配置类来将它注册到Spring IOC容器中
- * @author suyuan
- * @date 2020/5/26 15:15
  */
 public class SeedServerProtectConfigure implements WebMvcConfigurer {
 
@@ -28,7 +26,7 @@ public class SeedServerProtectConfigure implements WebMvcConfigurer {
     }
 
     @Bean
-    @ConditionalOnMissingBean(value = PasswordEncoder.class)//当IOC容器里没有PasswordEncoder类型的Bean的时候，则将BCryptPasswordEncoder注册到IOC容器中
+    @ConditionalOnMissingBean(value = PasswordEncoder.class)// 当IOC容器里没有PasswordEncoder类型的Bean的时候，则将BCryptPasswordEncoder注册到IOC容器中
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }

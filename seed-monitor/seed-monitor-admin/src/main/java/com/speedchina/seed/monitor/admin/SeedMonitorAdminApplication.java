@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableAdminServer
 @SpringBootApplication
-public class SeedMonitorAdminApplication
-{
+public class SeedMonitorAdminApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SeedMonitorAdminApplication.class, args);

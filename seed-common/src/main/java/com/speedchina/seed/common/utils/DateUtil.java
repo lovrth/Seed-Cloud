@@ -9,9 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 
-
-public class DateUtil
-{
+public class DateUtil {
 
     public static final String FULL_TIME_PATTERN = "yyyyMMddHHmmss";
 

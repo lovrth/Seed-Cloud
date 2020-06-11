@@ -10,8 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 @SpringBootConfiguration
 @PropertySource(value = {"classpath:seed-server-system.properties"})
 @ConfigurationProperties(prefix = "seed.server.system")
-public class SeedServerSystemProperties
-{
+public class SeedServerSystemProperties {
 
     /**
      * 免认证 URI，多个值的话以逗号分隔

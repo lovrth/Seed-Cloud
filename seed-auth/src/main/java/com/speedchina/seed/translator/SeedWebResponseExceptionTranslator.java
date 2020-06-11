@@ -12,8 +12,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * 覆盖默认的认证异常响应
- * @author suyuan
- * @date 2020/5/26 9:26
  */
 @Slf4j
 @Component
@@ -21,7 +19,8 @@ public class SeedWebResponseExceptionTranslator implements WebResponseExceptionT
 
     @Override
     public ResponseEntity translate(Exception e) {
-        ResponseEntity.BodyBuilder status = ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR);//统一返回500HTTP状态码
+        // 统一返回500HTTP状态码
+        ResponseEntity.BodyBuilder status = ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR);
         SeedResponse response = new SeedResponse();
         String message = "认证失败";
         log.error(message, e);

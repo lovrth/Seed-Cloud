@@ -9,8 +9,6 @@ import java.time.LocalDateTime;
 
 /**
  * 自定义打印配置类
- * @author suyuan
- * @date 2020/5/28 15:40
  */
 public class P6spySqlFormatConfigure implements MessageFormattingStrategy {
 

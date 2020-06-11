@@ -18,8 +18,8 @@ import java.util.Date;
 @Data
 @TableName("t_user")
 @Repository
-public class SystemUser implements Serializable
-{
+public class SystemUser implements Serializable {
+
     private static final long serialVersionUID = -4352868070794165001L;
 
     // 用户状态：有效

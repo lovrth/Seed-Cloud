@@ -11,13 +11,11 @@ import java.util.Date;
 
 /**
  * 自定义的用户实体类
- * @author suyuan
- * @date 2020/5/25 16:02
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class SeedAuthUser  extends User
-{
+public class SeedAuthUser  extends User {
+
     private static final long serialVersionUID = -1748289340320186418L;
 
     private Long userId;

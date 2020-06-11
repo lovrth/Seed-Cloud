@@ -7,15 +7,13 @@ import org.springframework.context.annotation.PropertySource;
 
 /**
  * 限制通过网关访问 ** /actuator/**资源
- * @author suyuan
- * @date 2020/6/2 11:24
  */
 @Data
 @SpringBootConfiguration
 @PropertySource(value = {"classpath:seed-gateway.properties"})
 @ConfigurationProperties(prefix = "seed.gateway")
-public class SeedGatewayProperties
-{
+public class SeedGatewayProperties {
+
     /**
      * 禁止外部访问的 URI，多个值的话以逗号分隔
      */

@@ -13,8 +13,7 @@ import java.util.regex.Pattern;
 
 
 @Slf4j
-public class SeedUtil
-{
+public class SeedUtil {
 
     /**
      * 设置响应

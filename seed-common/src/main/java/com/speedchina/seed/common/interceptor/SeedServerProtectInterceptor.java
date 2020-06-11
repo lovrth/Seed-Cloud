@@ -14,8 +14,6 @@ import java.io.IOException;
 
 /**
  * 全局拦截器拦截请求，并校验Zuul Token
- * @author suyuan
- * @date 2020/5/26 15:09
  */
 public class SeedServerProtectInterceptor implements HandlerInterceptor {
 

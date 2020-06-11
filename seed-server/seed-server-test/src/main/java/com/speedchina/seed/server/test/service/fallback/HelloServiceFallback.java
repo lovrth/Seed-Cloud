@@ -7,12 +7,11 @@ import org.springframework.stereotype.Component;
 
 /**
  * feign回退方法
- * @author suyuan
- * @date 2020/5/26 11:47
  */
 @Slf4j
 @Component
 public class HelloServiceFallback implements FallbackFactory<IHelloService> {
+
     @Override
     public IHelloService create(Throwable throwable) {
         return name -> {

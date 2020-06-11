@@ -1,8 +1,7 @@
 package com.speedchina.seed.common.entity;
 
 
-public class SeedConstant
-{
+public class SeedConstant {
 
     /**
      * Zuul请求头TOKEN名称（不要有空格）

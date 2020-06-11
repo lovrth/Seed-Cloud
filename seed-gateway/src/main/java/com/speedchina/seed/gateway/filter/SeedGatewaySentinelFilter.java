@@ -25,13 +25,11 @@ import java.util.Set;
 
 /**
  * 验证码限流
- * @author suyuan
- * @date 2020/5/27 16:26
  */
 @Slf4j
 @Configuration
-public class SeedGatewaySentinelFilter
-{
+public class SeedGatewaySentinelFilter {
+
     @Bean
     public ZuulFilter sentinelZuulPreFilter() {
         return new SentinelZuulPreFilter();

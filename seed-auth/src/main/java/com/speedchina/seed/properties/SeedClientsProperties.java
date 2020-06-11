@@ -4,12 +4,9 @@ import lombok.Data;
 
 /**
  * Client可配置的方式
- * @author suyuan
- * @date 2020/5/26 8:54
  */
 @Data
-public class SeedClientsProperties
-{
+public class SeedClientsProperties {
 
     private String client;
     private String secret;

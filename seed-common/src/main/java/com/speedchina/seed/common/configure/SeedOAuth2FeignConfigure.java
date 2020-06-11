@@ -11,11 +11,9 @@ import org.springframework.util.Base64Utils;
 
 /**
  * 拦截Feign请求，手动往请求头上加入令牌
- * @author suyuan
- * @date 2020/5/26 14:34
  */
-public class SeedOAuth2FeignConfigure
-{
+public class SeedOAuth2FeignConfigure {
+
     @Bean
     public RequestInterceptor oauth2FeignRequestInterceptor() {
         return requestTemplate -> {

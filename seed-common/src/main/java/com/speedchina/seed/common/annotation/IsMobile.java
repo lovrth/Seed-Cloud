@@ -14,8 +14,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = MobileValidator.class)
-public @interface IsMobile
-{
+public @interface IsMobile {
 
     String message();
 

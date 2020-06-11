@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: seed-Server-Test
+    name: seed-server-test
   boot:
     admin:
       client:
@@ -43,10 +43,10 @@ security:
 
 feign:
   hystrix:
-    enabled: true #让feign的回退生效
+    enabled: true # 让feign的回退生效
 
 hystrix:
-  shareSecurityContext: true #让请求获取到令牌
+  shareSecurityContext: true # 让请求获取到令牌
 
 info:
   app:

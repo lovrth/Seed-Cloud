@@ -17,12 +17,10 @@ import org.springframework.stereotype.Service;
 
 /**
  * 校验用户名密码的类
- * @author suyuan
- * @date 2020/5/25 16:05
  */
 @Service
-public class SeedUserDetailService implements UserDetailsService
-{
+public class SeedUserDetailService implements UserDetailsService {
+
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
@@ -35,8 +33,9 @@ public class SeedUserDetailService implements UserDetailsService
         if(systemUser!=null){
             String permissions = userManager.findUserPermissions(systemUser.getUsername());
             boolean notLocked = false;
-            if (StringUtils.equals(SystemUser.STATUS_VALID, systemUser.getStatus()))
+            if (StringUtils.equals(SystemUser.STATUS_VALID, systemUser.getStatus())) {
                 notLocked = true;
+            }
             SeedAuthUser authUser=new SeedAuthUser(systemUser.getUsername(),systemUser.getPassword(),true,true,true,notLocked,AuthorityUtils.commaSeparatedStringToAuthorityList(permissions));
             BeanUtils.copyProperties(systemUser,authUser);
             return authUser;

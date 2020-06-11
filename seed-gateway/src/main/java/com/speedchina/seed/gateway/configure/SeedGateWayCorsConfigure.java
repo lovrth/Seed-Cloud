@@ -8,12 +8,10 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  * 跨域处理
- * @author suyuan
- * @date 2020/5/26 15:51
  */
 @Configuration
-public class SeedGateWayCorsConfigure
-{
+public class SeedGateWayCorsConfigure {
+
     @Bean
     public CorsFilter corsFilter() {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

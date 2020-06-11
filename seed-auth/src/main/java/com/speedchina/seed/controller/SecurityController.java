@@ -18,8 +18,7 @@ import java.io.IOException;
 import java.security.Principal;
 
 @RestController
-public class SecurityController
-{
+public class SecurityController {
 
     @Autowired
     private ConsumerTokenServices consumerTokenServices;
@@ -28,12 +27,9 @@ public class SecurityController
 
     /**
      * 验证码
-     * @author suyuan
-     * @date 2020/5/27 15:31
      */
     @GetMapping("captcha")
-    public void captcha(HttpServletRequest request, HttpServletResponse response) throws IOException, ValidateCodeException
-    {
+    public void captcha(HttpServletRequest request, HttpServletResponse response) throws IOException, ValidateCodeException {
         validateCodeService.create(request, response);
     }
 
@@ -48,8 +44,7 @@ public class SecurityController
     }
 
     @DeleteMapping("signout")
-    public SeedResponse signout(HttpServletRequest request) throws SeedAuthException
-    {
+    public SeedResponse signout(HttpServletRequest request) throws SeedAuthException {
         String authorization = request.getHeader("Authorization");
         String token = StringUtils.replace(authorization, "bearer ", "");
         SeedResponse seedResponse = new SeedResponse();

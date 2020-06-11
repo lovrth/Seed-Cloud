@@ -20,11 +20,10 @@ import java.util.Map;
 
 
 @Slf4j
-@Validated //普通参数的校验 @Validated的作用是让@NotBlank注解生效
+@Validated
 @RestController
 @RequestMapping("user")
-public class UserController
-{
+public class UserController {
 
     @Autowired
     private IUserService userService;
@@ -38,8 +37,7 @@ public class UserController
 
     @PostMapping
     @PreAuthorize("hasAnyAuthority('user:add')") //@Valid对应实体对象传参时的参数校验
-    public SeedResponse addUser(@Valid SystemUser user) throws SeedException
-    {
+    public SeedResponse addUser(@Valid SystemUser user) throws SeedException {
         try {
             this.userService.createUser(user);
             return new SeedResponse().data("新增成功");
@@ -65,8 +63,6 @@ public class UserController
 
     /**
      * {required}提示内容需要在resources路径下创建ValidationMessages.properties配置文件
-     * @author suyuan
-     * @date 2020/5/28 17:18
      */
     @DeleteMapping("/{userIds}")
     @PreAuthorize("hasAnyAuthority('user:delete')")

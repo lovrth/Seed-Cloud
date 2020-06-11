@@ -7,10 +7,9 @@ import org.springframework.http.HttpStatus;
 
 /**
  * 自定义限流异常
- * @author suyuan
- * @date 2020/5/27 16:33
  */
 public class SeedGatewayBlockFallbackProvider implements ZuulBlockFallbackProvider {
+
     @Override
     public String getRoute() {
         return "*";

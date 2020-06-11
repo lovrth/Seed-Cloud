@@ -5,7 +5,7 @@ import com.speedchina.seed.common.entity.system.SystemUser;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface UserMapper extends BaseMapper<SystemUser>
-{
+public interface UserMapper extends BaseMapper<SystemUser> {
+
     SystemUser findByName(String username);
 }

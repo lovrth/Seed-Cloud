@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: seed-Monitor-Admin
+    name: seed-monitor-admin
   boot:
     admin:
       ui:

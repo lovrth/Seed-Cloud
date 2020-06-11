@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: seed-Auth
+    name: seed-auth
   boot:
     admin:
       client:

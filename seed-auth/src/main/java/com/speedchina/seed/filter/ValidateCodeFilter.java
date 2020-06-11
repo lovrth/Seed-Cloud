@@ -24,9 +24,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 /**
- * 定义一个过滤器，用于拦截请求并校验验证码的正确性。
- * @author suyuan
- * @date 2020/5/27 15:49
+ * 定义一个过滤器，用于拦截请求并校验验证码的正确性
  */
 @Slf4j
 @Component
@@ -66,8 +64,6 @@ public class ValidateCodeFilter extends OncePerRequestFilter {
 
     /**
      * 从请求头部获取ClientId信息
-     * @author suyuan
-     * @date 2020/6/1 14:42
      */
     private String getClientId(String header, HttpServletRequest request) {
         String clientId = "";

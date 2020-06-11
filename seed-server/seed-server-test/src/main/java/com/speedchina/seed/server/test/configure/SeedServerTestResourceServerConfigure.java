@@ -32,8 +32,6 @@ public class SeedServerTestResourceServerConfigure extends ResourceServerConfigu
 
     /**
      * 使用自定义异常
-     * @author suyuan
-     * @date 2020/5/26 10:00
      */
     @Override
     public void configure(ResourceServerSecurityConfigurer resources)

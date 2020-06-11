@@ -13,8 +13,6 @@ import java.io.IOException;
 
 /**
  * 令牌不正确401
- * @author suyuan
- * @date 2020/5/26 9:43
  */
 public class SeedAuthExceptionEntryPoint implements AuthenticationEntryPoint {
 

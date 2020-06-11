@@ -5,10 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.speedchina.seed.common.entity.QueryRequest;
 import com.speedchina.seed.common.entity.system.SystemUser;
 
-/**
- * @author suyuan
- * @date 2020/5/28 15:54
- */
+
 public interface IUserService extends IService<SystemUser> {
 
     /**

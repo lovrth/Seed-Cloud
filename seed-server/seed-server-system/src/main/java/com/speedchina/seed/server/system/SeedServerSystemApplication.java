@@ -15,7 +15,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableSeedAuthExceptionHandler
 @EnableSeedServerProtect
-//@MapperScan("com.speedchina.seed.server.system.mapper.*")
 @MapperScan("com.speedchina.seed.server.system.mapper")
 public class SeedServerSystemApplication {
 

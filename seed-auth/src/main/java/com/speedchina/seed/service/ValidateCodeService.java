@@ -21,12 +21,10 @@ import java.io.IOException;
 
 /**
  * 验证码服务类
- * @author suyuan
- * @date 2020/5/27 14:57
  */
 @Service
-public class ValidateCodeService
-{
+public class ValidateCodeService {
+
     @Autowired
     private RedisService redisService;
     @Autowired
@@ -83,9 +81,7 @@ public class ValidateCodeService
     }
 
     /**
-     * 用于设置响应头。在生成验证码图片后我们需要将其返回到客户端，所以需要根据不同的验证码格式设置不同的响应头
-     * @author suyuan
-     * @date 2020/5/27 15:02
+     * 用于设置响应头，在生成验证码图片后我们需要将其返回到客户端，所以需要根据不同的验证码格式设置不同的响应头
      */
     private void setHeader(HttpServletResponse response, String type) {
         if (StringUtils.equalsIgnoreCase(type, SeedConstant.GIF)) {

@@ -13,8 +13,6 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 
 /**
  * 只有通过认证服务器发放的令牌才能进行访问
- * @author suyuan
- * @date 2020/5/25 18:34
  */
 @Configuration
 @EnableResourceServer
@@ -34,18 +32,16 @@ public class SeedServerSystemResourceServerConfigure extends ResourceServerConfi
                 .requestMatchers().antMatchers("/**")
                 .and()
                 .authorizeRequests()
-                .antMatchers(anonUrls).permitAll()//添加免认证路径配置
+                // 添加免认证路径配置
+                .antMatchers(anonUrls).permitAll()
                 .antMatchers("/**").authenticated();
     }
 
     /**
      * 使用自定义异常
-     * @author suyuan
-     * @date 2020/5/26 10:00
      */
     @Override
-    public void configure(ResourceServerSecurityConfigurer resources)
-    {
+    public void configure(ResourceServerSecurityConfigurer resources) {
         resources.authenticationEntryPoint(exceptionEntryPoint)
                 .accessDeniedHandler(accessDeniedHandler);
     }

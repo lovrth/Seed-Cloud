@@ -16,13 +16,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 /**
  * 安全相关的配置类，对/oauth开头的类处理
  * 用于处理/oauth开头的请求，Spring Cloud OAuth内部定义的获取令牌，刷新令牌的请求地址都是以/oauth/开头的，也就是说本类用于处理和令牌相关的请求
- * @author suyuan
- * @date 2020/5/25 16:11 
  */
 @Order(2)
 @EnableWebSecurity
-public class SeedSecurityConfigure extends WebSecurityConfigurerAdapter
-{
+public class SeedSecurityConfigure extends WebSecurityConfigurerAdapter {
+
     @Autowired
     private SeedUserDetailService seedUserDetailService;
 
@@ -33,6 +31,7 @@ public class SeedSecurityConfigure extends WebSecurityConfigurerAdapter
     private ValidateCodeFilter validateCodeFilter;
 
     @Bean
+    @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }

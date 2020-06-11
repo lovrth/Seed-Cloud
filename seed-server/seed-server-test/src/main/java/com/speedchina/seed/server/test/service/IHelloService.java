@@ -12,12 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
  * value指定远程服务的名称
  * contextId指定这个Feign Client的别名
  * fallbackFactory指定了回退方法
- * @author suyuan
- * @date 2020/5/26 11:47
  */
 @FeignClient(value = SeedServerConstant.SEED_SERVER_SYSTEM, contextId = "helloServiceClient", fallbackFactory = HelloServiceFallback.class)
-public interface IHelloService
-{
+public interface IHelloService {
+
     @GetMapping("hello")
     String hello(@RequestParam("name") String name);
 }

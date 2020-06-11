@@ -10,14 +10,10 @@ import java.lang.annotation.*;
  * EnableSeedOauth2FeignClient
  * EnableSeedServerProtect
  * 三个注解的组合注解
- * @author suyuan
- * @date 2020/5/26 15:38
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Import(SeedCloudApplicationSelector.class)
-public @interface SeedCloudApplication
-{
-
+public @interface SeedCloudApplication {
 }

@@ -16,11 +16,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
  * 指定序列化机制
- * @author suyuan
- * @date 2020/5/27 11:34
  */
-public class SeedLettuceRedisConfigure
-{
+public class SeedLettuceRedisConfigure {
 
     @Bean
     @ConditionalOnClass(RedisOperations.class)

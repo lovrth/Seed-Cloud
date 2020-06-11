@@ -4,12 +4,9 @@ import lombok.Data;
 
 /**
  * 验证码配置类
- * @author suyuan
- * @date 2020/5/27 14:22
  */
 @Data
-public class SeedValidateCodeProperties
-{
+public class SeedValidateCodeProperties {
 
     /**
      * 验证码有效时间，单位秒

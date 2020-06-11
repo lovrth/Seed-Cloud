@@ -10,12 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author MrBird
- */
 @Service
-public class UserManager
-{
+public class UserManager {
 
     @Autowired
     private UserMapper userMapper;
