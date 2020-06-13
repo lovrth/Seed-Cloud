@@ -3,7 +3,7 @@ package com.speedchina.seed.properties;
 import lombok.Data;
 
 /**
- * Client可配置的方式
+ * client实体
  */
 @Data
 public class SeedClientsProperties {

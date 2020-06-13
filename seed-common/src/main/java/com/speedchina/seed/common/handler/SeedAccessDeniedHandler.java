@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 用户无权限403
+ * 用户无权限403（资源服务器异常响应）
+ * 覆盖原始异常响应
  */
 public class SeedAccessDeniedHandler implements AccessDeniedHandler {
 

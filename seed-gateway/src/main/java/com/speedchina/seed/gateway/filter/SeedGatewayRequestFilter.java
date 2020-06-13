@@ -29,7 +29,7 @@ public class SeedGatewayRequestFilter extends ZuulFilter {
     private AntPathMatcher pathMatcher = new AntPathMatcher();
 
     /**
-     * PRE过滤器用于将请求路径与配置的路由规则进行匹配，以找到需要转发的目标地址，并做一些前置加工，比如请求的校验等；
+     * PRE过滤器用于将请求路径与配置的路由规则进行匹配，以找到需要转发的目标地址，并做一些前置加工，比如请求的校验等
      */
     @Override
     public String filterType() {
@@ -37,7 +37,7 @@ public class SeedGatewayRequestFilter extends ZuulFilter {
     }
 
     /**
-     * PreDecorationFilter用于处理请求上下文，优先级为5，所以我们可以定义一个优先级在PreDecorationFilter之后的过滤器，这样便可以拿到请求上下文。
+     * PreDecorationFilter用于处理请求上下文，优先级为5，所以我们可以定义一个优先级在PreDecorationFilter之后的过滤器，这样便可以拿到请求上下文
      */
     @Override
     public int filterOrder() {

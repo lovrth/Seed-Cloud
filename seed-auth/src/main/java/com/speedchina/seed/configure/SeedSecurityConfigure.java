@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 /**
  * 安全相关的配置类，对/oauth开头的类处理
- * 用于处理/oauth开头的请求，Spring Cloud OAuth内部定义的获取令牌，刷新令牌的请求地址都是以/oauth/开头的，也就是说本类用于处理和令牌相关的请求
+ * 用于处理/oauth开头的请求，Spring Cloud OAuth内部定义的获取令牌，刷新令牌的请求地址都是以/oauth/开头的，本类用于处理和令牌相关的请求
  */
 @Order(2)
 @EnableWebSecurity

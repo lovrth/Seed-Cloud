@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 令牌不正确401
+ * 令牌不正确401（资源服务器异常响应）
+ * 覆盖原始异常响应
  */
 public class SeedAuthExceptionEntryPoint implements AuthenticationEntryPoint {
 

@@ -19,7 +19,7 @@ SEED-Cloud是一款使用Spring Cloud Greenwich.SR1、Spring Cloud OAuth2构建�
 
 账号 | 密码| 权限
 ---|---|---
-mrbird | 1234qwer |超级管理员，拥有所有增删改查权限
+seed | 1234qwer |超级管理员，拥有所有增删改查权限
 
 SBA平台相关账号密码：
 

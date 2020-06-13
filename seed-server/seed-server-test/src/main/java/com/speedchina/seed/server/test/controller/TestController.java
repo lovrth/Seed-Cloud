@@ -15,6 +15,7 @@ public class TestController {
     @Autowired
     private IHelloService helloService;
 
+    // 服务调用
     @GetMapping("hello")
     public String hello(String name){
         return this.helloService.hello(name);

@@ -21,6 +21,7 @@ public class SeedOAuth2FeignConfigure {
             String zuulToken = new String(Base64Utils.encode(SeedConstant.ZUUL_TOKEN_VALUE.getBytes()));
             requestTemplate.header(SeedConstant.ZUUL_TOKEN_HEADER, zuulToken);
 
+            // 请求头上加入令牌
             Object details = SecurityContextHolder.getContext().getAuthentication().getDetails();
             if (details instanceof OAuth2AuthenticationDetails) {
                 String authorizationToken = ((OAuth2AuthenticationDetails) details).getTokenValue();

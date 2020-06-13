@@ -76,7 +76,8 @@ public class SeedAuthorizationServerConfigure extends AuthorizationServerConfigu
                 .userDetailsService(seedUserDetailService)
                 .authenticationManager(authenticationManager)
                 .tokenServices(defaultTokenServices())
-                .exceptionTranslator(exceptionTranslator);//异常翻译器
+                // 自定义认证异常响应
+                .exceptionTranslator(exceptionTranslator);
     }
 
     @Bean
@@ -95,8 +96,6 @@ public class SeedAuthorizationServerConfigure extends AuthorizationServerConfigu
         DefaultTokenServices tokenServices = new DefaultTokenServices();
         tokenServices.setTokenStore(tokenStore());
         tokenServices.setSupportRefreshToken(true);
-//        tokenServices.setAccessTokenValiditySeconds(60 * 60 * 24);
-//        tokenServices.setRefreshTokenValiditySeconds(60 * 60 * 24 * 7);
         tokenServices.setAccessTokenValiditySeconds(authProperties.getAccessTokenValiditySeconds());
         tokenServices.setRefreshTokenValiditySeconds(authProperties.getRefreshTokenValiditySeconds());
         return tokenServices;

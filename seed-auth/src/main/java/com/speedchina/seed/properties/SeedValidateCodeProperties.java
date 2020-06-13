@@ -3,7 +3,7 @@ package com.speedchina.seed.properties;
 import lombok.Data;
 
 /**
- * 验证码配置类
+ * 验证码实体
  */
 @Data
 public class SeedValidateCodeProperties {

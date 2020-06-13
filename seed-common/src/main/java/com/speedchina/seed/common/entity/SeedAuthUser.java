@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Date;
 
 /**
- * 自定义的用户实体类
+ * 自定义的用户实体类,拓展了在线用户信息
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

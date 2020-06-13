@@ -30,7 +30,7 @@ public class SecurityController {
      */
     @GetMapping("captcha")
     public void captcha(HttpServletRequest request, HttpServletResponse response) throws IOException, ValidateCodeException {
-        validateCodeService.create(request, response);
+        validateCodeService.create(request,response);
     }
 
     @GetMapping("oauth/test")

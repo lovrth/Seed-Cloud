@@ -8,7 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -23,12 +22,13 @@ public class SeedUserDetailService implements UserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
     @Autowired
     private UserManager userManager;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
-    {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
         SystemUser systemUser = userManager.findByName(username);
         if(systemUser!=null){
             String permissions = userManager.findUserPermissions(systemUser.getUsername());
@@ -43,7 +43,6 @@ public class SeedUserDetailService implements UserDetailsService {
             throw new UsernameNotFoundException("");
         }
     }
-
 
     /*@Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

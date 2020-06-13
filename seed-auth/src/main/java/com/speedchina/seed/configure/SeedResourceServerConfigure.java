@@ -43,8 +43,8 @@ public class SeedResourceServerConfigure extends ResourceServerConfigurerAdapter
      * 使用自定义异常
      */
     @Override
-    public void configure(ResourceServerSecurityConfigurer resources)
-    {
+    public void configure(ResourceServerSecurityConfigurer resources) {
+
         resources.authenticationEntryPoint(exceptionEntryPoint)
                 .accessDeniedHandler(accessDeniedHandler);
     }

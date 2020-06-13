@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 import java.lang.annotation.*;
 
 /**
- * 用自定义注解来设置上自定义异常
+ * 认证类型异常响应 401 403
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
